@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+
+* {
+    margin: 0  auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans Narrow', sans-serif;
+
+}
+
+body {
+    background-color: black;
+}
+
+/*Menu*/
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-image: linear-gradient(to bottom, red,rgb(151, 24, 24),black);
+    text-align: center;
+
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li #fla {
+    position: absolute;
+    left: 400px;
+    top: 25px;
+}
+
+nav ul li #adi {
+    position: absolute;
+    right: 570px;
+    top: 30px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 60px;
+    transition: background .3s;
+    margin-top: 0%;
+}
+
+nav ul li:last-child a {
+    float: right;
+    background-color: rgb(87, 87, 87);
+}
+
+
+nav ul li a:hover {
+    color: rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
+/*faixa*/
+
+#faixa {
+    font-size: 30px;
+    font-style: italic;
+    background-image:linear-gradient(to bottom, rgb(68, 68, 68), rgb(126, 121, 121), rgb(175, 175, 175));
+    padding: 30px;
+    text-align: center;
+}
+
+
+
+
+/*Imagem de entrada*/
+.imgent {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding-bottom: 60px;
+}
+
+.imgent #pedrofla {
+    width: 900px;
+}
+
+.imgent #pedrofla h1 {
+    font-style: italic;
+    font-size: 70px;
+    color: Red;
+}
+
+.imgent #pedrofla p {
+    width: 890px;
+    text-align: justify;
+}
+
+
+
+
+/*Sessão imgs*/
+.sesimg {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 400px;
+}
+
+.sesimg div {
+    align-items: center;
+    text-align: justify;
+    width: 350px;
+    height: 370px;
+    padding: 30px;   
+    background-color: rgba(128, 128, 128, 0.514);
+    border-radius: 10px;
+    color: white;
+}
+
+.sesimg div h2 {
+    color: red;
+}
+
+
+
+
+
+/*Formulário*/
+
+.form-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 600px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 238, 0);
+}
+
+.form-flex #formu {
+    width: 700px;
+
+}
+
+.form-flex #informa {
+    width: 400px;
+}
+
+.form-flex #informa h3 {
+    color: red;
+}
+
+.form-flex #informa p {
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+/*footer*/
+footer {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(109, 28, 28), rgb(255, 0, 0));
+    padding: 50px 0;
+
+}
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+    
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-footer {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.col-footer h4 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+.col-footer ul {
+    list-style: none;
+
+}
+
+.col-footer ul li {
+    margin: 10px 0;
+    
+}
+
+.col-footer ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.col-footer ul li a:hover {
+    color: white;
+}
+
+.col-footer .social {
+    margin-top: 30px;
+}
+
+.col-footer .social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+
+.col-footer .social img:hover {
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+
+}
+
+.col-footer .form-sub input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.col-footer .form-sub input::placeholder {
+    color: white;
+}
+
+.col-footer .form-sub a {
+    display: block;
+    width: 70px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.col-footer .form-sub #p {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;
+}

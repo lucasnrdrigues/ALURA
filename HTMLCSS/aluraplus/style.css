@@ -1,0 +1,157 @@
+/* No início do projeto ela começou pegando as cores do figma*/
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'inter';
+    --botao-azul-feito: #3C92FA ;
+}
+
+/* Zernado o CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.principal {
+    background-image: url("assets/Background.png");
+    background-repeat: no-repeat; /*Se não tiver essa propiedade a imagem de fundo irá se repetir!*/
+    background-size: contain; /*Preenche todo o container(section)*/
+    align-items: center; /*Como estamos no grid, esse comando alinhou no centro da coluna 1, esse comando alinha de acordo com o display(flex ou grid) do bloco pai*/
+    text-align: center; /*Esse comando alinha tudo que está dentro do bloco, e não apenas textos!*/
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; /* Divide a tela em 2 partes de 50%, se você olhar na fer. do dev. vai estar divido! */
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block; /*Faz com que ele preencha o bloco inteiro*/
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-feito);
+    color: var(--cor-de-fundo);
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px dashed var(--branco-principal);
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao{
+    display: inline-block; /*Diferente do block(pega uma linha toda), esse meio que pega em linha mas fica pequeno, também conseguimos definir uma largura e altura assim como o display "block"*/
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*Tirando o estilo da lista*/
+    margin: 5em 0;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1.5em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 10em;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+/*Esse comando com que ao clicar e segurar ele fique na cor X*/
+.lista__link a:active{
+    color: purple;
+}

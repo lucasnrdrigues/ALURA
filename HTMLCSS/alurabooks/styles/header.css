@@ -1,0 +1,166 @@
+.cabecalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/Menu.svg');
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center; /*Alinhar no centro o background image*/
+}
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /*A position ja vem por padrão estático, com esse atributo a gente libera outros atributos como top, left, etc*/
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+.lista-menu{
+    display: none; /*Faz com que desapareça e não ocupa espaço nenhum*/
+    position: absolute; /*Faz com que ele se mexa de acordo com o cabeçalho(PAI)*/
+    top: 100%;
+    width: 60vw; /*vw - viewport width*/
+}
+
+/* Quando o container-botao ficar checked ele procura o lista-menu e coloca display block nele*/
+.container__botao:checked ~ .lista-menu{
+    display: block; /**/
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700; 
+}
+
+.lista-menu__link{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase; /*Transformar em maiúsculo*/
+}
+
+.container__botao {
+    display: none;
+}
+
+/* Fazendo o titulo desaparecer, pois so quero ele quando a tela for de 1024 */
+.container__titulo {
+    display: none;
+}
+
+/* Fazendo desaparecer também */
+.opcoes {
+    display: none;
+}
+
+.container__texto{
+        display: none;	
+}
+
+
+/* Como estamos usando o mobile first. usamos o min-width, no desktop first usamos o amx-width para quando o tamanho da tela for abaixando! */
+/* Dá para usar sem esse "screen" também! */
+/* Usamos o 1024, que é o valor que estava no figma! */
+@media screen and (min-width: 1024px){
+    
+    .container__titulo, .container__titulo--negrito{
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block; /*Fazendo o titulo aparecer*/
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex; /* Como aqui já definimos o display flex para editarmos a lista, ele já faz aparecer quando a gnt aumenta a tela*/
+    }
+
+
+    .opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    /* Fazendo o coração sumir quando a tela cresce*/
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    /* Fazendo o menu hamburguer sumir também*/
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    /* Algumas configs estão la em cima para que ele funcione certinho! Nós só aproveitamnos!! */
+    .opcoes__botao:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    /* Tirando a caixa de marcar do checkbox */
+    .opcoes__botao {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1728px){
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opcoes{
+        margin-right: auto; /*Quando usamos o AUTO, ele faz com que toda a margem seja preenchida, no caso toda a margem da direita foi preenchida, jogando tudo para a esquerda*/
+    }
+
+    .container__texto {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .banner__pesquisa {
+        width: 35%;
+    }
+
+    .banner__pesquisa::placeholder {
+        background-position: 12em;
+    }
+
+    .banner {
+        padding: 6em 0;
+    }
+}

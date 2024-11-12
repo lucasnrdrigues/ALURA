@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/PaginaDeLogin.css" />
+    <link rel="stylesheet" href="./styles/CampoDeDigitacao.css" />
+    <title>Login | CodeConnect</title>
+</head>
+
+<body>
+    <!-- Criando div onde será impresso nossos componentes -->
+    <div id="root"></div>
+
+    <!-- Puxando o React via CDN a partir do site https://cdnjs.com/libraries/react -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"
+    integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Puxando via CDN o react DOM, que nos permite manipular a árvore DOM do HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+    integrity="sha512-MOCpqoRoisCTwJ8vQQiciZv0qcpROCidek3GTFS6KTk2+y7munJIlKCVkFCYY+p3ErYFXCjmFjnfTTRSC1OHWQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Ferramenta Babel de compilação de códigos em JS que podem estar em uma versão mais moderna, mnas que o navegador não suporta, então essa ferramenta faz essa compilação/tradução -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.min.js"
+    integrity="sha512-MIXku7j6pJ0hqd2T4WXZMGerp3BU9B91rfLRDp/McDBNNdnwTD+yLJaz9AHcYXT6k16dYTkG9S2KRPGxaBIfBQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- CRIANDO COMPONENETES - serve para separarmos trechos de códigos para serem reutilizáveis -->
+    <script type="text/babel">
+        //Componente titulo usando children para deiar o conteudo dinamico
+        // Children - sempre que eu quiser enviar algo dentro de um componente sem ser utilizando atributo/propiedade, usamos o children(ou seja, ele será o fiho daquele componente)
+        function Titulo({ children }) {
+            return (
+                <h1 className='form__titulo'>{children}</h1>
+            )
+        }
+
+        //Componente do subtitulo
+        function Subtitulo({ children }) {
+            return (
+                <h2 className='form__texto'>{children}</h2 >
+            )
+        }
+
+        // Criando componente com props - propiedades para deixar dinamico, ele é diferente do children
+        function CampoDeDigitacao({ label, tipo, placeholder, value, setValor }) {
+            return (
+                <div className='form__campo-digitacao'>
+                    <label for={tipo}>{label}</label>
+                    <input type={tipo}
+                        placeholder={placeholder}
+                        required
+                        id={tipo}
+                        value={value}
+                        onChange={(evento => setValor(evento.target.value))} />
+                </div>
+            )
+        }
+
+        function Botao({ children }) {
+            return (
+                <button type='submit'
+                className='form__botao'>{ children }</button>
+            )
+        }
+
+        function CheckBox() {
+            return (
+                //Fragment - serve para abranger todo um conteudo, como se ele fosse um pai. Ele é como se fosse uma div, não possui sigficado semantico. Caso o conteúdo abaixo não estivesse dentro do fragment, ia aparecer um erro dizendo que precisava de uma tag pai
+                <> 
+                    <div className='form__campo-checkbox'>
+                        <input type="checkbox" id="lembrar" />
+                        <label for="lembrar" />
+                    </div>
+                    <p className="form__opcoes-texto">Lembrar-me</p>
+                </>
+            )
+        }
+
+        function Texto({ classe, children }) {
+            return (
+                <p className={classe}>{children}</p>
+            )
+        }
+
+        function ItemRedesSociais({ link, nome }) {
+            return (
+                <li>
+                    <a href={link}>
+                        <img src={`./img/${nome}.svg`} alt={`ícone do ${nome}`} />
+                        {nome}
+                    </a>
+                </li>
+            )
+        }
+
+        function Link({ children }) {
+            return (
+                <a href='#' className='container-links__link'>
+                    {children}
+                </a>
+            )
+        }
+
+        // Componente que consome componentes
+        // useState - Ele permite que você crie e atualize o estado dos seus componentes funcionais. O estado é uma variável que guarda algum valor que pode mudar ao longo do tempo, e que afeta a renderização do componente.
+        function PaginaDeLogin() {
+            const [email, setEmail] = React.useState('') //Criando variável de estado para o email
+            const [senha, setSenha] = React.useState('')
+
+            //Evento para acontecer ao enviar o formulário
+            const handleSubmit = (event) => {
+                event.preventDefault();
+            }
+
+            //A função setValor, vai acontecer a cada mudança que acontecer dentro do campo email
+            return (
+                <div className='container-login'>
+                    <img src="./img/imagem-login.png" alt="Mulher negra de cabelo pretos" />
+                    <section>
+                        <form onSubmit={handleSubmit}>
+                            <Titulo>Login</Titulo>
+                            <Subtitulo>Boas-vindas! Faça o seu login</Subtitulo>
+                            <CampoDeDigitacao label='E-mail ou usuário'
+                                tipo='email'
+                                placeholder='Digite o seu e-mail ou usuário'
+                                value={email}
+                                setValor={setEmail}
+                            />
+                            <CampoDeDigitacao label='Senha'
+                                tipo='password'
+                                placeholder='Digite a sua senha' 
+                                value={senha} 
+                                setValor={setSenha}/>
+                            
+                            <fieldset className="form__opcoes">
+                            <CheckBox />
+                            <p>
+                                <a href="#" aria-label="Recuperar senha esquecida">Esqueci a senha</a>
+                            </p>
+                            </fieldset>
+                            <Botao>Login</Botao>
+                        </form>
+                        <div className='container-links'>
+                            <Texto classe='container-links__titulo'>ou entre com outras contas</Texto>
+                            <ul>
+                                <ItemRedesSociais link='https://www.github.com' nome='GitHub' />
+                                <ItemRedesSociais link='https://www.google.com' nome='Google' />
+                            </ul>
+                            <Texto classe='container-links__texto'>Ainda não tem conta?</Texto>
+                            <Link>Crie o seu cadastro</Link>
+                        </div>
+                    </section>
+                </div>
+            )
+        }
+
+        // O método createRoot cria uma raiz do React, que é um ponto de entrada para o seu aplicativo React no DOM. Já o método render renderiza um elemento React no DOM, usando a raiz do React criada pelo método createRoot
+        //Fazendo a ligação do nosso React com a árvore DOM do nosso HTML, isso nos permite inserir elementos
+        // .render - método para renderizar os componentes que queremos
+        ReactDOM.createRoot(document.getElementById('root')).render(<PaginaDeLogin />)
+
+    </script>
+</body>
+
+</html>

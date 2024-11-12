@@ -1,0 +1,364 @@
+
+/*Menu*/
+
+
+
+#index {
+    background-color: rgb(0, 0, 0);
+      
+}
+
+#not {
+    text-align: center;
+    padding: 30px;
+    background-image:linear-gradient(to bottom, white, rgb(179, 179, 179), rgb(121, 121, 121) );
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#not1 {
+    color: aliceblue;
+    text-align: center;
+    padding: 30px;
+    background-image:linear-gradient(to bottom, white, rgb(179, 179, 179), rgb(121, 121, 121) );
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../Ativ4/image/torcida.jpg);
+}
+
+
+.inf {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.inf #camp {
+    color: white;
+    background-color: red;
+    border-radius: 40px;
+
+}
+
+.jogo {
+    text-align: center;
+    font-size: large;
+    color: red;
+    
+}
+
+.rodape {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.rodape p {
+    font-size: 30px;
+}
+
+.rodape img {
+    margin: 30px;
+}
+
+/*socio*/
+
+form {
+    background-image: linear-gradient(to bottom, rgb(255, 0, 0), rgb(119, 18, 18), black);
+}
+
+form p:hover {
+    color: grey;
+}
+
+form p{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    line-height: 50px;
+}
+
+form label{
+    font-size: 20px;
+}
+
+form #conc {
+    color: white;
+}
+
+form fieldset {
+    color: white;
+    background-color: black;
+}
+
+form h2, h3, h4 {
+    color: rgb(0, 0, 0);
+}
+
+form code {
+    color: white;
+}
+
+form #code {
+    color: white;
+}
+
+
+/*Ingresso*/
+#ingresso {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), grey, grey);
+}
+
+#ingform {
+    background-image: linear-gradient(to bottom, rgb(51, 50, 50),white ,rgb(90, 87, 87));
+}
+
+/*gavea*/
+
+#gavea {
+    background-image:linear-gradient(to bottom, white, grey, black);
+    font-size: 20px;
+}
+
+.gavfla {
+    font-size: larger;
+}
+
+#gav1 {
+    color: red;
+    
+}
+
+.gavmaraca{
+    font-style: italic;
+}
+
+.gavflaflu{
+    font-style: italic;
+}
+
+#pgav2 {
+
+    color: aliceblue;
+
+}
+
+#gav1:hover {
+    color: black;
+}
+
+#gav2 {
+    color: red;
+    
+}
+
+#gav2:hover {
+    color: black;
+}
+
+
+
+/*Sobre*/
+
+#sobre {
+    background-image: linear-gradient(to bottom, rgb(97, 11, 11), rgb(231, 88, 88), white);
+    font-size: 20px;
+}
+
+#sobre h1 {
+    font-size: 60px;
+    color: white;
+}
+
+#sobre h3 {
+    font-size: 30px;
+    color: white;
+}
+
+#sobre #sobsob:hover {
+    color: grey;
+}
+
+#sobre #inicio:hover {
+    color: grey;
+}
+
+#sobre #inicio {
+    text-align: center;
+}
+
+
+#sobre #unif:hover {
+    color: grey;
+}
+
+#sobre #estadio:hover {
+    color: grey;
+} 
+
+#sobre #estadio {
+    text-align: center;
+}
+
+
+#mengao {
+    text-align: center;
+}
+
+/*Sessão imgs*/
+.sesimg {
+    margin-top: 40px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.sesimg div {
+    align-items: center;
+    text-align: justify;
+    width: 350px;
+    height: 370px;
+    padding: 30px;   
+    background-color: rgba(128, 128, 128, 0.514);
+    border-radius: 10px;
+    color: white;
+}
+
+.sesimg div h2 {
+    color: red;
+}
+
+
+
+/*footer*/
+footer {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(109, 28, 28), rgb(255, 0, 0));
+    padding: 50px 0;
+
+}
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+    
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-footer {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.col-footer h4 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+.col-footer ul {
+    list-style: none;
+
+}
+
+.col-footer ul li {
+    margin: 10px 0;
+    
+}
+
+.col-footer ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.col-footer ul li a:hover {
+    color: white;
+}
+
+.col-footer .social {
+    margin-top: 30px;
+}
+
+.col-footer .social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+
+.col-footer .social img:hover {
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+
+}
+
+.col-footer .form-sub input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.col-footer .form-sub input::placeholder {
+    color: white;
+}
+
+.col-footer .form-sub a {
+    display: block;
+    width: 70px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.col-footer .form-sub #p {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;
+}
+
+
+
+
+

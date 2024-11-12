@@ -1,0 +1,5 @@
+nome = str(input('Digite uma frase: ')).strip()
+nome_a = nome.replace('A', 'a')
+print(f'A letra A apareceu {nome_a.count("a")} na frase.')
+print(f'A primeira letra A apareceu na {nome.find("a") + 1} posição.')
+print(f'A primeira letra A apareceu na {nome.rfind("a") + 1} posição.')

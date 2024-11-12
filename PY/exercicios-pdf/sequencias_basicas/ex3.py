@@ -1,0 +1,5 @@
+nome = str(input('Digite o seu nome: '))
+sal = float(input('Digite o valor do seu salário: '))
+print(f'Nome do Funcionário: {nome}')
+print(f'Salário: {sal:.2f}')
+print(f'O funcionário {nome} tem um salário de R${sal:.2f}')

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Compra de Ingresso</title>
+        <link rel="stylesheet" href="../siteBootstrap/style.css">
+        <link rel="stylesheet" href="../siteBootstrap/style1.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    </head>
+
+    <body id="ingresso">
+        <!--Menu-->
+<!--Nav bar com bootstrap-->
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="image/Fla.png" alt="Logo" width="90" height="90class="d-inline-block align-text-top"></a>
+      <a class="navbar-brand" href="../siteBootstrap/socio.html">Sócio</a>
+      <a class="navbar-brand" href="../siteBootstrap/gavea.html">Gávea</a>
+      <a class="navbar-brand" href="../siteBootstrap/ingresso.html">Ingresso</a>
+      <a class="navbar-brand" href="../siteBootstrap/sobre.html">Sobre</a>
+    </div>
+  </nav>
+
+                <h1>Compra de ingresso</h1>
+
+            <form id="ingform" action="meubancodedados.sql" method="post">
+
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">País:</span>
+                    <input type="text" class="form-control" placeholder="País" aria-label="Username" aria-describedby="addon-wrapping">
+                  </div>
+
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Estado:</span>
+                    <input type="text" class="form-control" placeholder="Estado" aria-label="Username" aria-describedby="addon-wrapping">
+                  </div>
+
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Cidade:</span>
+                    <input type="text" class="form-control" placeholder="Cidade" aria-label="Username" aria-describedby="addon-wrapping">
+                  </div>
+
+                <p> Selecione o jogo que você quer assistir: 
+                    <select name="joggo">
+                        <option>selecione</option>
+                        <option value="flaAtle">FLA x ATL</option>
+                        <option value="flaBot">FLA x BOT</option>
+                        <option value="flaVas">FLA x VAS</option>
+                    </select>
+                </p>
+
+                <p> Selecione a formade pagamento: 
+                    <select name="pag">
+                        <option>selecione</option>
+                        <option value="cartao">Cartão</option>
+                        <option value="pix">Pix</option>
+                        <option value="boleto">Boleto</option>
+                    </select>
+                </p>
+
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Qual o seu nome completo?</span>
+                    <input type="text" class="form-control" placeholder="Nome completo" aria-label="Username" aria-describedby="addon-wrapping">
+                  </div>
+
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Senha:</span>
+                    <input type="text" class="form-control" placeholder="senha" aria-label="Username" aria-describedby="addon-wrapping">
+                  </div><sub>
+                    Máx 6 caracteres</sub></p>
+
+                <p>Email: <input type="email" name="email"/></p>
+
+                <p>Data de Nascimento: <input type="date" name="data"/></p>
+
+                <p>Telefone: <input type="tel" name="tel"
+                    maxlength="14" placeholder="(00)90000-0000" /></p>
+
+                <p> sexo:
+                    <input type="radio" name="sexo" value="1"/> Feminino
+                    <input type="radio" name="sexo" value="2"/> Masculino
+                    <input type="radio" name="sexo" value="3"/> Outros
+                </p>
+
+                <!--Estrutura do input file-->
+                <p>
+                    <label for="myfile">Anexe aqui o seu documento:</label>
+                    <input type="file" name="myfile">
+                </p>
+
+                <!--Estrutura do input image-->
+                <p>
+                    <label for="homepage">Anexe a sua foto:</label>
+                    <input align="center" type="image" src="../Ativ4/image/submit.png" alt="Submit" width="70" height="70">
+                </p>
+
+                <p id="conc">
+                    <input type="checkbox" name="termos" value=""/>
+                    Concordo com as normas do jogo que na qual não pode entrar com bebidas alcoólicas e drogas no jogo.
+                </p>
+
+                    <br />
+                    <br />
+
+                <!--Estrutura botão reset e submit-->
+                    <input type="reset" value="Limpar"/>
+                    <input type="submit" name="Enviar" value="Enviar"/>
+
+                <!--Corpo da estrutura do fieldset-->
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                        <label>Nome: <input type="text" name="Nome" 
+                            placeholder="Coloque seu nome"/></label>
+                        <label>Data de Nascimento: 
+                            <input type="date" name="data"/></label>
+                        <label>RG: 
+                            <input type="date" name="data"/></label>
+                        <label>CPF: 
+                            <input type="date" name="data"/></label>
+                </fieldset>
+            </form>
+                <br />
+                <br />
+                <br />
+
+            <!--Sessão de Imagens-->
+        <div class="sesimg">
+            <div>
+                <img src="../siteBootstrap/image/ing1.jpg" alt="" width="300px" height="150px">
+                <h2>INGRESSO</h2>
+                <p>Compras de ingressos para convite de festa com o tema flamengo. <br> Modernize enviando convite digital pelo WhatsApp, Messenger, e-mail ou demais redes sociais.</p>
+            </div>
+            <div>
+                <img src="../siteBootstrap/image/ing2.jpg" alt="" width="300px" height="150px">
+                <h2>FLA x FLU</h2>
+                <p>Vamos, Flamengo!
+                        <br />
+                A venda de ingressos para o segundo e decisivo #FLAxFLU das oitavas de final da Copa do Brasil começa neste sábado (13), às 14h, para sócios-torcedores do Nação. Salve os horários na sua agenda, programe-se e garanta o seu ingresso!
+                        <br />
+                Saiba mais em: http://bit.ly/flaxflu0106<p>
+            </div>
+            <div>
+                <img src="../siteBootstrap/image/ing3.jpg" alt="" width="300px" height="150px">   
+                <h2>FLA x VASCO</h2>     
+                <p>O Vasco da Gama joga no dia 19/03, domingo, às 18h, diante do Flamengo, no Estádio Maracanã, em partida válida pelo jogo de volta da semifinal do Campeonato Carioca 2023 e os ingressos para este confronto estarão disponíveis ainda hoje, a partir das 14h. Confira todas as informações sobre a venda.</p>
+            </div>
+            <div>
+                <img src="../siteBootstrap/image/ing4.jpg" alt="" width="300px" height="150px">
+                <h2>FLA x CRU</h2>
+                <p>Flamengo x Cruzeiro mudam a chave e agora pensam na competição internacional. As equipes fazem o clássico brasileiro no mata mata da Libertadores.
+                    <br />
+                Data e hora: 8 de agosto, quinta-feira, às 21h45 (horário de Brasília)
+                Local: Maracanã
+                </p>
+            </div>
+        </div>   
+
+
+        <!--inicio do footer-->
+<footer>
+    <div class="container-footer">
+        <div class="row-footer">
+            <!-- Início footer col -->
+            <div class="col-footer">
+                <h4>O flamengo</h4>
+                <ul>
+                    <li><a href="">Quem somos</a></li>
+                    <li><a href="">Nossos times</a></li>
+                    <li><a href="">Política de privacidade</a></li>
+                    <li><a href="">Sócio torcedor</a></li>
+                </ul>
+            </div>
+            <!-- Fim footer col -->
+            <!-- Início footer col -->
+            <div class="col-footer">
+                <h4>Obter Ajuda</h4>
+                <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Transporte</a></li>
+                    <li><a href="">Devoluções</a></li>
+                    <li><a href="">Endereço</a></li>
+                    <li><a href="">Status Pedido</a></li>
+                </ul>
+            </div>
+            <!-- Fim footer col -->
+            <!-- Início footer col -->
+            <div class="col-footer">
+                <h4>Loja online</h4>
+                <ul>
+                    <li><a href="">Uniformes</a></li>
+                    <li><a href="">jaquetas</a></li>
+                    <li><a href="">Chuteiras</a></li>
+                    <li><a href="">Endereço</a></li>
+                    <li><a href="">Opções de pagamento</a></li>
+                </ul>
+            </div>
+            <!-- Fim footer col -->
+            <!-- Início footer col -->
+            <div class="col-footer">
+                <h4>Se inscreva em nosso canal: <span id="flatv">Fla</span> TV</h4>
+                <!-- Form Sub -->
+                <div class="form-sub">    
+                    <form>
+                        <input type="email" placeholder="Digite o seu e-mail" require> 
+                            <br />
+                        <a href="../siteBootstrap/inscricao.html"><img src="../siteBootstrap/image/sub.png" alt=""></a>            
+                    </form>
+                </div>   
+                    <br />
+                    <br />
+                 <!--Fim form sub  -->
+                <div class="medias-socias">
+                    <a href="https://www.whatsapp.com/?lang=pt_br"><img src="../siteBootstrap/image/wpp.png" alt="wpp" width="25px" height="25px"></a>
+                    <a href="https://pt-br.facebook.com/"><img src="../siteBootstrap/image/face.png" alt="face" width="25px" height="25px"></a>
+                    <a href="https://www.instagram.com/"><img src="../siteBootstrap/image/insta.png" alt="insta" width="25px" height="25px"></a>
+                    <a href="https://twitter.com/login?lang=pt"><img src="../siteBootstrap/image/tt.png" alt="twiter" width="25px" height="25px"></a>
+                </div>
+            </div>
+            <!-- Fim footer col -->
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>

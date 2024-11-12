@@ -1,0 +1,63 @@
+/* Importando uma fonte, SEM USAR */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* Resetando o CSS da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%; /* OU 100vh, ambos códigos ocupa todo o viewport height,ou seja 100% da tela*/
+    box-sizing: border-box; /*Não deixa o conteúdo filho escapar pra fora do contéudo pai*/
+    background-color: #000000;
+    color: #F6F6F6;
+}
+
+.titulo-destaque {
+    color: #22D4FD ;
+}
+
+/* MAIN */
+.apresentacao {
+    margin: 10% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Classe filha */
+.apresentacao__conteudo {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 36px;
+    font-family: 'Krona One', sans-serif; /*Utilizando a fonte importada*/
+}
+
+.apresentacao__conteudo_texto {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apresentacao__links__link {
+    background-color: #22D4FD;
+    width: 280px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: 600; /*Peso da fonte que importamos, no caso 600*/
+    padding: 21.5px 0;  /*Primeiro valor vertical e o segundo horizontal*/
+    text-decoration: none; /* Tirando a decoração do texto */
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
